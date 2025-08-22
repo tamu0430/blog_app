@@ -44,7 +44,7 @@ GET /posts?userId={userId}
     "content": "これは私の最初のブログ投稿です。",
     "author": {
       "id": 1,
-      "username": "user1",
+      "username": "tanaka_taro",
       "name": "田中太郎"
     },
     "createdAt": "2024-01-15T10:30:00.000Z",
@@ -76,7 +76,7 @@ GET /posts/{postId}
   "content": "これは私の最初のブログ投稿です。詳細な内容がここに表示されます。",
   "author": {
     "id": 1,
-    "username": "user1",
+    "username": "tanaka_taro",
     "name": "田中太郎",
     "email": "tanaka@example.com"
   },
@@ -116,7 +116,7 @@ POST /posts
   "content": "投稿の内容をここに記述します。",
   "author": {
     "id": 1,
-    "username": "user1",
+    "username": "tanaka_taro",
     "name": "田中太郎"
   },
   "createdAt": "2024-01-16T14:20:00.000Z",
@@ -158,7 +158,7 @@ PATCH /posts/{postId}
   "content": "更新された内容",
   "author": {
     "id": 1,
-    "username": "user1",
+    "username": "tanaka_taro",
     "name": "田中太郎"
   },
   "createdAt": "2024-01-15T10:30:00.000Z",
@@ -205,7 +205,7 @@ POST /auth/login
 **リクエストボディ**:
 ```json
 {
-  "username": "user1",
+  "username": "tanaka_taro",
   "password": "password123"
 }
 ```
@@ -238,7 +238,7 @@ GET /users/{username}
 ```json
 {
   "id": 1,
-  "username": "user1",
+  "username": "tanaka_taro",
   "name": "田中太郎",
   "email": "tanaka@example.com"
 }
@@ -354,7 +354,7 @@ GET /users/{username}
 # 1. ログインしてトークンを取得
 curl -X POST http://localhost:3001/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"username": "user1", "password": "password123"}'
+  -d '{"username": "tanaka_taro", "password": "password123"}'
 
 # 2. 取得したトークンで投稿を作成
 curl -X POST http://localhost:3001/posts \
@@ -377,7 +377,7 @@ const loginResponse = await fetch('http://localhost:3001/auth/login', {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    username: 'user1',
+    username: 'tanaka_taro',
     password: 'password123'
   })
 });
